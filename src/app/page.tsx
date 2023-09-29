@@ -35,11 +35,10 @@ export default function Home() {
   const suggestions: SuggestionItem[] = useSharedStore((state) => state.suggestions);
 
   async function startConversation () {
-  
-    if (!ifStarted) {
-      sendConversationToGPT(conversation,true);
-      setIfStarted(true);
-    }
+      if (!ifStarted) {
+        sendConversationToGPT(conversation,true);
+        setIfStarted(true);
+      }
   }
 
   function formatPassage(passage: string) {
@@ -171,7 +170,7 @@ export default function Home() {
         {
           !ifThinking && 
           <div className={"pt-12 font-extrabold text-8xl pb-8"}>
-            <h2>WHERE TO EXPLORE</h2>
+            <h2>ASK TOMAR!</h2>
           </div>
         }
         
